@@ -1,0 +1,31 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #1a1a2e, #16213e);
+}
+
+.titulo {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+}
+
+.text-field, .password-field {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 8;
+}
+
+.btn-login {
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+}
+
+.btn-login:hover {
+    -fx-background-color: #005fa3;
+}
+
+.label {
+    -fx-text-fill: white;
+}
