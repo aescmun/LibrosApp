@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<VBox xmlns:fx="http://javafx.com/fxml">
-    <Label text="Menú (en construcción)"/>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Insets?>
+
+
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.librosapp.controller.MenuController"
+      alignment="CENTER"
+      spacing="15"
+      styleClass="root">
+
+    <padding>
+        <Insets top="30"
+                right="30"
+                bottom="30"
+                left="30"/>
+    </padding>
+
+    <Label text="GESTIÓN DE LIBROS"
+           styleClass="titulo"/>
+
+    <TextField fx:id="txtId"
+               promptText="ID"/>
+
+    <TextField fx:id="txtTitulo"
+               promptText="Título"/>
+
+    <DatePicker fx:id="dpFecha"/>
+
+    <TextField fx:id="txtPaginas"
+               promptText="Número de páginas"/>
+
+    <Button text="Añadir"
+            onAction="#añadir"
+            styleClass="btn-accion"/>
+
+    <Button text="Buscar por ID"
+            onAction="#buscarPorId"
+            styleClass="btn-secundario"/>
+
+    <Button text="Modificar"
+            onAction="#modificar"
+            styleClass="btn-accion"/>
+
+    <Button text="Eliminar"
+            onAction="#eliminar"
+            styleClass="btn-peligro"/>
+
+    <Button text="Ver todos"
+            onAction="#verTodos"
+            styleClass="btn-secundario"/>
+
+    <Button text="Salir"
+            onAction="#salir"
+            styleClass="btn-peligro"/>
+
+    <Label fx:id="lblResultado"
+           styleClass="label-resultado"/>
+
 </VBox>
