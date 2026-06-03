@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.librosapp.controller.ListaLibrosController"
+            stylesheets="@../css/style.css"
+            styleClass="root">
+
+    <children>
+        <Label text="LISTADO DE LIBROS"
+               layoutX="250"
+               layoutY="20"
+               styleClass="titulo"/>
+
+        <TableView fx:id="tablaLibros"
+                   layoutX="50"
+                   layoutY="70"
+                   prefWidth="500"
+                   prefHeight="300"
+                   styleClass="tabla">
+
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="80"/>
+                <TableColumn fx:id="colTitulo" text="Título" prefWidth="180"/>
+                <TableColumn fx:id="colFecha" text="Fecha de Publicación" prefWidth="150"/>
+                <TableColumn fx:id="colPaginas" text="Páginas" prefWidth="90"/>
+            </columns>
+        </TableView>
+
+        <Button text="Volver"
+                layoutX="250"
+                layoutY="390"
+                onAction="#volver"
+                styleClass="btn-secundario"/>
+    </children>
+</AnchorPane>
