@@ -29,3 +29,25 @@
 .label {
     -fx-text-fill: white;
 }
+
+.tabla {
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-text-fill: white;
+}
+
+.tabla .column-header {
+    -fx-background-color: #1e3a8a;
+}
+
+.tabla .table-row-cell {
+    -fx-text-fill: white;
+}
+
+.btn-secundario {
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+}
+
+.btn-secundario:hover {
+    -fx-background-color: #555;
+}
