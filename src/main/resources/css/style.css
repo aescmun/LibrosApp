@@ -29,3 +29,53 @@
 .label {
     -fx-text-fill: white;
 }
+
+.btn-accion {
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.btn-accion:hover {
+    -fx-background-color: #005fa3;
+}
+
+.btn-peligro {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.btn-peligro:hover {
+    -fx-background-color: #992d22;
+}
+
+.btn-secundario {
+    -fx-background-color: #4b5563;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.btn-secundario:hover {
+    -fx-background-color: #374151;
+}
+
+.date-picker {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.label-resultado {
+    -fx-text-fill: white;
+    -fx-font-style: italic;
+    -fx-font-size: 14px;
+}
