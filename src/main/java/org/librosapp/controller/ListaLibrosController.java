@@ -14,6 +14,7 @@ import org.librosapp.service.LibroService;
 import java.io.IOException;
 
 public class ListaLibrosController {
+    private Scene escenaMenuAnterior;
     private LibroService libroService = new LibroService();
     @FXML private TableView<Libro> tablaLibros;
     @FXML private TableColumn<Libro, Integer> colId;
@@ -23,9 +24,8 @@ public class ListaLibrosController {
 
     @FXML
     public void initialize() {
-        colId.setCellValueFactory(data ->
-                new javafx.beans.property.SimpleObjectProperty<>(data.getValue().getId())
-        );
+        colId.setCellValueFactory(data -> new javafx.beans.property.SimpleObjectProperty<>(data.getValue().getId()));
+
 
         colTitulo.setCellValueFactory(data ->
                 new javafx.beans.property.SimpleStringProperty(data.getValue().getTitulo())
@@ -56,17 +56,15 @@ public class ListaLibrosController {
         fade.play();
         move.play();
     }
+    public void setEscenaMenuAnterior(Scene escenaAnterior) {
+        this.escenaMenuAnterior = escenaAnterior;
+    }
 
     @FXML
     public void volver() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu.fxml"));
-            Parent root = loader.load();
+        if (escenaMenuAnterior != null) {
             Stage stage = (Stage) tablaLibros.getScene().getWindow();
-            stage.setScene(new Scene(root));
-
-        } catch (IOException e) {
-            e.printStackTrace();
+            stage.setScene(escenaMenuAnterior);
         }
     }
 }

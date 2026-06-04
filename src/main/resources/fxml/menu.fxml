@@ -10,8 +10,7 @@
 <?import javafx.geometry.Insets?>
 
 
-
-
+<?import javafx.scene.layout.HBox?>
 <VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.librosapp.controller.MenuController"
       alignment="CENTER"
@@ -38,30 +37,39 @@
 
     <TextField fx:id="txtPaginas"
                promptText="Número de páginas"/>
+    <HBox spacing="10"
+          alignment="CENTER">
 
-    <Button text="Añadir"
-            onAction="#añadir"
-            styleClass="btn-accion"/>
+        <Button text="Añadir"
+                onAction="#añadir"
+                styleClass="btn-accion"/>
 
-    <Button text="Buscar por ID"
-            onAction="#buscarPorId"
-            styleClass="btn-secundario"/>
+        <Button text="Buscar por ID"
+                onAction="#buscarPorId"
+                styleClass="btn-secundario"/>
 
-    <Button text="Modificar"
-            onAction="#modificar"
-            styleClass="btn-accion"/>
+        <Button text="Modificar"
+                onAction="#modificar"
+                styleClass="btn-accion"/>
 
-    <Button text="Eliminar"
-            onAction="#eliminar"
-            styleClass="btn-peligro"/>
+        <Button text="Eliminar"
+                onAction="#eliminar"
+                styleClass="btn-peligro"/>
 
-    <Button text="Ver todos"
-            onAction="#verTodos"
-            styleClass="btn-secundario"/>
+    </HBox>
 
-    <Button text="Salir"
-            onAction="#salir"
-            styleClass="btn-peligro"/>
+    <HBox spacing="10"
+          alignment="CENTER">
+
+        <Button text="Ver todos"
+                onAction="#verTodos"
+                styleClass="btn-secundario"/>
+
+        <Button text="Salir"
+                onAction="#salir"
+                styleClass="btn-peligro"/>
+
+    </HBox>
 
     <Label fx:id="lblResultado"
            styleClass="label-resultado"/>
