@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.librosapp.model.Libro;
+import org.librosapp.service.LibroService;
 
 import java.time.LocalDate;
 
@@ -172,10 +173,15 @@ public class MenuController {
             Scene scene =
                     new Scene(loader.load());
 
+            ListaLibrosController listaController = loader.getController();
+
             Stage stage = (Stage)
                     ((Node) event.getSource())
                             .getScene()
                             .getWindow();
+
+            listaController.setEscenaMenuAnterior(((Node) event.getSource()).getScene());
+
 
             stage.setScene(scene);
 

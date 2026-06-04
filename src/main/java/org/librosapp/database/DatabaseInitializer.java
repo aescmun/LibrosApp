@@ -18,7 +18,7 @@ public class DatabaseInitializer {
             CREATE TABLE IF NOT EXISTS libros (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 titulo TEXT NOT NULL,
-                fechaPublicacion TEXT,
+                fecha_publicacion TEXT,
                 paginas INTEGER
             )
         """;

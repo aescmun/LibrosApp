@@ -1,33 +1,32 @@
 package org.librosapp.service;
-import org.librosapp.dao.LibroDAO;
 import org.librosapp.dao.impl.LibroDAOImpl;
 import org.librosapp.model.Libro;
 import java.util.List;
 
 public class LibroService {
-    private LibroDAO libroDAO;
+    private LibroDAOImpl libroDAOImpl;
 
     public LibroService() {
-        this.libroDAO = new LibroDAOImpl();
+        this.libroDAOImpl = new LibroDAOImpl();
     }
 
     public void agregarLibro(Libro libro) {
-        libroDAO.insertar(libro);
+        libroDAOImpl.insertar(libro);
     }
 
     public void modificarLibro(Libro libro) {
-        libroDAO.actualizar(libro);
+        libroDAOImpl.actualizar(libro);
     }
 
     public void eliminarLibro(int id) {
-        libroDAO.eliminar(id);
+        libroDAOImpl.eliminar(id);
     }
 
     public Libro buscarPorId(int id) {
-        return libroDAO.buscarPorId(id);
+        return libroDAOImpl.buscarPorId(id);
     }
 
     public List<Libro> obtenerTodos() {
-        return libroDAO.obtenerTodos();
+        return libroDAOImpl.obtenerTodos();
     }
 }
